@@ -7,10 +7,10 @@ CORS(app)
 weather = {
     "data": [
         {
-            "day": "1/6/2019",
-            "temperature": "23",
-            "windspeed": "16",
-            "event": "Sunny"
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
         }
     ]
 }
@@ -18,10 +18,10 @@ weather = {
 
 @app.route("/", methods=['GET'])
 def index():
-    return "Welcome to CodezUp"
+    return "Welcome to REST"
 
 
-@app.route("/weatherReport/", methods=['GET'])
+@app.route("/data/", methods=['GET'])
 def weather_report():
     global weather
     return jsonify([weather])
